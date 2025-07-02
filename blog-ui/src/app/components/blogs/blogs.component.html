@@ -1,0 +1,12 @@
+<div class="flex flex-col item-center px-20">
+<div class="text-black text-center">
+  <h1 class="text-4xl font-bold text-black mb-6">All Blogs</h1>
+</div>
+<div class="flex flex-wrap gap-4">
+    @for (blog of allBlogs; track $index) {
+    <div class="w-3/12">
+      <app-blog-card [blog]="blog"></app-blog-card>
+    </div>
+    }
+  </div>
+</div>

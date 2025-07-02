@@ -1,0 +1,19 @@
+<mat-card class="example-card" appearance="outlined">
+  <mat-card-header class="bg-white">
+    <div mat-card-avatar class="example-header-image"></div>
+    <mat-card-title>{{blog.title}} <span
+        class="bg-green-500 text-white font-bold p-1 rounded-md text-xs shadow-md">{{GetCategoryName()}}</span></mat-card-title>
+  </mat-card-header>
+  @if(blog.image){
+  <img mat-card-image [src]="blog.image">
+  }
+  <mat-card-content class="bg-white">
+    <p>
+      {{blog.description}}
+    </p>
+  </mat-card-content>
+  <mat-card-actions class="bg-white">
+    <button mat-button [routerLink]="'/blog/'+blog.id">Read More</button>
+
+  </mat-card-actions>
+</mat-card>

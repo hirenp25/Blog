@@ -1,0 +1,12 @@
+<div color="primary" class="fixed top-0 w-full h-16 bg-blue-600 top-0 fixed w-full z-50 flex justify-between px-20 h-16 items-center text-white shadow-md">
+  <span class="text-2xl font-bold" routerLink="/" class="cursor-pointer">My Blog App</span>
+  <span></span>
+
+  <ul class="flex gap-4">
+    <li><a href="/blogs">Blogs</a></li>
+    <li><a href="/about">AboutUs</a></li>
+    @if(authService.getIsLoggedIn()){
+    <li routerLink="/admin/blogs">Manage Blogs</li>
+    }
+  </ul>
+</div>

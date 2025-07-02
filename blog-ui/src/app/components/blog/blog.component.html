@@ -1,0 +1,16 @@
+@if (blog) {
+<div class="flex flex-col px-40 mt-10">
+  <div class="flex item-baseline gap-4">
+    <h1 class="text-2xl font-bold">{{ blog.title }}</h1>
+    <span class="bg-green-500 text-white font-bold p-1 rounded-md shadow-md">{{GetCategoryName()}}</span>
+  </div>
+  @if(blog.image){
+  <div class="h-96 mb-10">
+    <img class="h-full w-full" [src]="blog.image" alt="Blog Image">
+  </div>
+  }
+  <div [innerHTML]="blog.content"></div>
+</div>
+}@else{
+<p>Loading..</p>
+}
